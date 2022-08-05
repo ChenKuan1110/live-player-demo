@@ -1,14 +1,17 @@
 <script lang="ts">
-import TestDPlayer from "./components/TestDPlayer.vue"
+// import TestDPlayer from "./components/TestDPlayer.vue"
+import MyPlayer from "./components/MyPlayer.vue";
+
 export default {
   components: {
-    TestDPlayer
-}
+    MyPlayer
+  }
 }
 </script>
 
 <template>
-  <TestDPlayer />
+  <!-- <TestDPlayer /> -->
+  <MyPlayer />
 </template>
 
 

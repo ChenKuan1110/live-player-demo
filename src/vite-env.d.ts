@@ -12,3 +12,6 @@ declare var wx: any
 
 // flv.js
 declare var flvjs: any
+
+// dplayer 声明
+declare module 'dplayer'
