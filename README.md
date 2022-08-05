@@ -8,3 +8,7 @@
 实现功能：
 1. 拉取 rtmp 流
 2. 转换视频格式 ： HLS、DASH
+
+
+## 项目演示地址
+[在线演示](http://chenkuan1110.github.io/live-player-demo)
