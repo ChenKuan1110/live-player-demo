@@ -11,6 +11,11 @@
   </div>
   <div class="my-player">
     <section class="header">
+      <select v-model="type">
+        <option value="auto">非直播流</option>
+        <option value="flv">FLV</option>
+        <option value="hls">HLS</option>
+      </select>
       <input v-model="url" type="text" placeholder="请输入直播播放源">
       <button @click="loadVideo" :disabled="loadBtnDisabled">加载</button>
     </section>
@@ -24,6 +29,7 @@ import Dplayer from 'dplayer'
 
 const url = ref<string | null>('');
 const dp = ref<null | any>();
+const type = ref<string>('auto');
 
 onMounted(() => {
   
@@ -40,12 +46,14 @@ onUnmounted(() => {
 const loadBtnDisabled = computed(()=>url.value == '')
 
 const loadVideo = async () => {
+  console.log(type.value)
+
   dp.value = new Dplayer({
     container: document.querySelector('.player-container'),
     live: true,
     video: {
       url: url.value,
-      type: 'auto'
+      type: type.value
     }
   });
 
