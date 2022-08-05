@@ -8,6 +8,7 @@ export default defineConfig({
     vue(),
     // basicSSL()
   ],
+  base: '/live-player-demo/',
   server: {
     // https: true,
     host: '0.0.0.0'
